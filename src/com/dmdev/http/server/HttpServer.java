@@ -42,7 +42,7 @@ public class HttpServer {
             var body = Files.readAllBytes(Path.of("resources", "example.html"));
             var headers = """
                     HTTP/1.1 200 OK
-                    content-typpe: text/html
+                    content-type: text/html
                     content-length: %s
                     """.formatted(body.length).getBytes();
             outputStream.write(headers);
